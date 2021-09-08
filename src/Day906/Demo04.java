@@ -1,7 +1,7 @@
 package Day906;
 import java.util.Scanner;
 public class Demo04{
-    public static void main(String[] args) {..
+    public static void main(String[] args) {
         int year, month, day;
         Scanner sc = new Scanner(System.in);
         while (true) {
