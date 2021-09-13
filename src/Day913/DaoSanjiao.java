@@ -1,10 +1,9 @@
 package Day913;
 
-public class FangXing {
+public class DaoSanjiao {
     public static void main(String[] args) {
-        for (int i = 0; i < 5; i++) {
-
-            for (int i1 = 0; i1 <=4; i1++) {
+        for (int i = 5; i >=1; i--) {
+            for (int i1 = 1; i1 <=i; i1++) {
                 System.out.print("  *");
             }
             System.out.println();

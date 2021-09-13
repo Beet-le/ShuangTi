@@ -2,7 +2,6 @@ package Day909;
 
 public class Shuixiahu2 {
     public static void main(String[] args) {
-
         for (int i = 100; i < 1000; i++) {
             int a = i / 100;
             int b = i / 10 % 10;
