@@ -11,7 +11,7 @@ public class Demo03MySz3 {
         if(i==3){
             newstu[i]=85;
         }
-        for ( i =3; i <newstu.length; i++) {
+        for ( i =3; i <oldstu.length; i++) {
             newstu[i+1]=oldstu[i];
         }
         for (int i1 = 0; i1 < newstu.length; i1++) {
