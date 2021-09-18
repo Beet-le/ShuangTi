@@ -6,7 +6,6 @@ public class Denglu3 {
     static Scanner sc = new Scanner(System.in);
     static int username, password;
     static int username1, password1;
-
     public static void main(String[] args) {
         do {
             System.out.println("***********菜单************");
@@ -30,7 +29,6 @@ public class Denglu3 {
             }
         } while (username != username1 || password != password1);
     }
-
     public static void Panduan() {
         if (username == username1 && password == password1) {
             System.out.println("密码真确");
@@ -38,14 +36,12 @@ public class Denglu3 {
             System.out.println("输入有误");
         }
     }
-
     public static void zhuche() {
         System.out.println("请输入账号：");
         username = sc.nextInt();
         System.out.println("请输入密码：");
         password = sc.nextInt();
     }
-
     public static void denglu() {
         System.out.println("请输入账号：");
         username1 = sc.nextInt();

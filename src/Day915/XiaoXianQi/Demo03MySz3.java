@@ -1,4 +1,4 @@
-package Day915;
+package Day915.XiaoXianQi;
 
 public class Demo03MySz3 {
     public static void main(String[] args) {
