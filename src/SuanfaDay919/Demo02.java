@@ -2,8 +2,10 @@ package SuanfaDay919;
 
 public class Demo02     {
     public static void main(String[] args) {
+        long stat=System.currentTimeMillis();
         long result = fun(10);
         System.out.println(result);
+        System.out.println(stat);
 
     }
     public static long fun(long n){
@@ -13,4 +15,5 @@ public class Demo02     {
         }
         return  result;
     }
+
 }
