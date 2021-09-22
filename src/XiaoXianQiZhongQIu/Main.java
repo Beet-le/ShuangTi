@@ -50,6 +50,5 @@ public class Main {
             }
         }while (condition!=1&&condition!=2&&condition!=3);
 
-
     }
 }
