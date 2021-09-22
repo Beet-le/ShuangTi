@@ -1,5 +1,7 @@
 package control;
 
+import com.XiaoXianQi.control.User_Dao;
+
 import java.util.Scanner;
 
 public class control {
