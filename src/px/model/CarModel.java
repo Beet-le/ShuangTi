@@ -1,25 +1,26 @@
 package px.model;
 
-public class CarModel {
-    private int Carid;
-    private String cartyple;
+public class CarModel
+{
+    private int carid;
+    private String cartype;
     private String color;
     private String type;
 
     public int getCarid() {
-        return Carid;
+        return carid;
     }
 
     public void setCarid(int carid) {
-        Carid = carid;
+        this.carid = carid;
     }
 
-    public String getCartyple() {
-        return cartyple;
+    public String getCartype() {
+        return cartype;
     }
 
-    public void setCartyple(String cartyple) {
-        this.cartyple = cartyple;
+    public void setCartype(String cartype) {
+        this.cartype = cartype;
     }
 
     public String getColor() {
