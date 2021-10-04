@@ -1,4 +1,4 @@
-package px.model;
+package px2.model;
 
 public class CarModel
 {
