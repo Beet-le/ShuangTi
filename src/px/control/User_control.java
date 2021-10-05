@@ -6,18 +6,19 @@ import java.util.Scanner;
 
 public class User_control
 {
+    static int j=0;
     static Scanner sc=new Scanner(System.in);
     public static void main(String[] args)
     {
+        User_Dao dao=new User_Dao();
         User_model[] user=new User_model[100];
-        int j=0;
         while (true)
         {
-            User_Dao dao=new User_Dao();
-            System.out.println("**********************************");
-            System.out.println("*********欢迎使用核算检测系统*********");
-            System.out.println("**********************************");
-            System.out.println("****请选择操作：1.注册 2.登录 3.退出系统");
+            System.out.println("***************************************");
+            System.out.println("*********欢迎使用核算检测系统**************");
+            System.out.println("***************************************");
+            System.out.println("****请选择操作：1.注册 2.登录 3.退出系统****");
+            System.out.println("***************************************");
             int num=sc.nextInt();
             switch (num)
             {
