@@ -1,23 +1,21 @@
-package px.dao;
+package COV_19.px.dao;
 
-import com.sun.xml.internal.bind.v2.model.core.ID;
-import px.model.JianChaFangFa;
-import px.model.User_model;
-import px.model.mous;
-import px.model.nose;
+import COV_19.px.model.JianChaFangFa;
+import COV_19.px.model.User_model;
+import COV_19.px.model.mous;
+import COV_19.px.model.nose;
 
+import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.jar.JarOutputStream;
 
 public class User_Dao
 {
-    static User_model[] infor=new User_model[100];
-    static Scanner sc=new Scanner(System.in);
-    static int inform=0;
-    static User_model[] user=new User_model[100];
 
+    static Scanner sc=new Scanner(System.in);
+    static User_model[] user=new User_model[100];
+    ArrayList<String> list=new ArrayList<>();
 //   注册页面
-    public User_model[] post(User_model[] user,int j)
+    public User_model[] post(User_model[] user, int j)
     {
         user[j]=new User_model();
         System.out.println("--------注册页面--------");
@@ -31,7 +29,7 @@ public class User_Dao
     }
 
 //    登录页面
-    public void loge(User_model[] user,int j)
+    public void loge(User_model[] user, int j)
    {
        while (true)
        {
@@ -75,23 +73,7 @@ public class User_Dao
            int m=sc.nextInt();
            switch (m)
            {
-               case 1:
-                   this.add_user(infor,inform);
-                   inform++;
-                   break;
-               case 2:this.delete(infor,inform);
-                   break;
-               case 3:
-                   this.select_all(infor,inform);
-                   break;
-               case 4:
-                   this.modify(infor,inform);
-                   break;
-               case 5:this.modify1(infor,inform);
-                   break;
-               case 6:
-                   /*System.exit(0);*/
-                   return;
+
                default:
                    System.out.println("您输入的数字不合法，请您重新输入吖^_^");
            }
@@ -105,7 +87,7 @@ public class User_Dao
     }
 
 //    添加受检者页面
-    public User_model[] add_user(User_model[] infor,int inform)
+    public User_model[] add_user(User_model[] infor, int inform)
     {
         infor[inform]=new User_model();
         System.out.println("请输入ID:");
@@ -145,7 +127,7 @@ public class User_Dao
     }
 
 //    查看受检者
-    public void select_all(User_model[] infor,int inform)
+    public void select_all(User_model[] infor, int inform)
     {
         JianChaFangFa jianChaFangFa=new mous();
         JianChaFangFa jianChaFangFa2=new nose();
@@ -170,7 +152,7 @@ public class User_Dao
     }
 
 //    修改受检者
-    public void modify(User_model[] infor,int inform)
+    public void modify(User_model[] infor, int inform)
     {
         System.out.println("--------修改受检者界面--------");
         System.out.println("请输入修改者ID:");
@@ -212,7 +194,7 @@ public class User_Dao
     }
 
 //    修改受检结果
-    public void modify1(User_model[] infor,int inform)
+    public void modify1(User_model[] infor, int inform)
     {
         System.out.println("--------修改受检结果界面--------");
         System.out.println("请输入修改者ID");
@@ -242,58 +224,21 @@ public class User_Dao
             }
         }
     }
-  /*  //寻找核酸用户是否存在
-    public int findById(PatientModel[]hesuanm,int hesuannum,int id) {
-        for (int i = 0; i < hesuannum; i++) {
-            if (hesuanm[i].getPeoploid() == id) {
-                return i;
-            }
-        }
-        return -1;
-    }*/
-   /* public void delete(User_model[] hesuanm,int hesuannum) {
-        System.out.println("请输入你想要删除用户的ID");
-        int del_id = sc.nextInt();
-        int flag = findById(hesuanm, hesuannum, del_id);
-        if (flag == -1) {
-            System.out.println("用户不存在");
-        } else {
-            for (int i = 0; i < hesuannum; i++) {
-                if (i < flag) {
-                    hesuanm[i] = hesuanm[i];
-                } else {
-                    hesuanm[i] = hesuanm[i + 1];
-                }
-            }
-            System.out.println("删除用户:" + del_id + "成功！");
-        }
 
-    }*/
-  public int findById(User_model[] infor,int inform,int ID) {
-      for (int i = 0; i < inform; i++) {
-          if ( (infor[i].getID()).equals(ID)) {
-              return i;
-          }
-      }
-      return -1;
-  }
-    public void delete(User_model[] infor,int inform)
+    public void delete(User_model[] infor, int inform)
     {
         System.out.println("请输入用户ID：");
-        int del_id = sc.nextInt();
-        int flag = findById(infor, inform, del_id);
-        if (flag == -1) {
-            System.out.println("用户不存在");
-        } else {
-            for (int i = 0; i < inform; i++) {
-                if (i < flag) {
-                    infor[i] =infor[i];
-                } else {
-                    infor[i] = infor[i + 1];
-                }
-            }
-            System.out.println("删除用户:" + del_id + "成功！");
+        String id3=sc.next();
+        int arry[]={0};
+        for (int i=0;i<infor.length;i++)
+        {
+           for (int j=i;j<inform;j++){
+               if((infor[i].getID()).equals(id3)){
+                  infor[j]=infor[j+1];
+               }
+           }
         }
+        System.out.println("删除成功");
     }
  /*   //从数组中删除元素方法
     private int arrayTotal=0;

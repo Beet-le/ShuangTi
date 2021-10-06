@@ -6,7 +6,7 @@ public class Test {
 //        Animal animal=new Cat();
         Animal animal2=new Dog();
         Animal animal=new Cat();
-      animal.eat();
+//      animal.eat();
       Cat cat=(Cat) animal;
       cat.function();
         /*if (animal instanceof Cat){

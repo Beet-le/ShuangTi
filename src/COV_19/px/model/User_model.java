@@ -1,4 +1,4 @@
-package px.model;
+package COV_19.px.model;
 
 public class User_model {
     private String ID;
