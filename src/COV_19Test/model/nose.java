@@ -1,4 +1,4 @@
-package px.model;
+package COV_19Test.model;
 
 public class nose extends JianChaFangFa{
     public void noses() {

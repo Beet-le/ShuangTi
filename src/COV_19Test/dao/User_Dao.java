@@ -1,13 +1,11 @@
-package px.dao;
+package COV_19Test.dao;
 
-import com.sun.xml.internal.bind.v2.model.core.ID;
-import px.model.JianChaFangFa;
-import px.model.User_model;
-import px.model.mous;
-import px.model.nose;
+import COV_19Test.model.JianChaFangFa;
+import COV_19Test.model.User_model;
+import COV_19Test.model.mous;
+import COV_19Test.model.nose;
 
 import java.util.Scanner;
-import java.util.jar.JarOutputStream;
 
 public class User_Dao
 {

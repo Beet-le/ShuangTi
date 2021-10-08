@@ -1,7 +1,7 @@
-package px.control;
+package COV_19Test.control;
 
-import px.dao.User_Dao;
-import px.model.User_model;
+import COV_19Test.dao.User_Dao;
+import COV_19Test.model.User_model;
 import java.util.Scanner;
 
 public class User_control
